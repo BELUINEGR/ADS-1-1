@@ -1,0 +1,20 @@
+package arraylist;
+
+public class PalindromeChecker {
+    public static boolean isPalindrome(String str) {
+        str = str.replaceAll(" ", "").toLowerCase();
+        
+        String reverseStr = new StringBuilder(str).reverse().toString();
+        return str.equals(reverseStr);
+    }
+
+    public static void main(String[] args) {
+        String input1 = "Qazaq";
+        boolean output1 = isPalindrome(input1);
+        System.out.println(output1 ? "Yes" : "No"); 
+
+        String input2 = "Qazan";
+        boolean output2 = isPalindrome(input2);
+        System.out.println(output2 ? "Yes" : "No");  
+    }
+}
